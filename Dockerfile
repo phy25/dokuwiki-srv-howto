@@ -1,8 +1,7 @@
-FROM alpine:3.4
+FROM alpine:3.5
 MAINTAINER Phy <dockerfile@phy25.com>
 # Originally from Ilya Stepanov <dev@ilyastepanov.com>
 
-# http://dl-cdn.alpinelinux.org/alpine/edge/community/
 RUN apk --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ add \
         php7 php7-fpm php7-gd php7-session php7-xml nginx supervisor curl unzip
