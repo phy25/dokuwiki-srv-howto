@@ -10,6 +10,7 @@ RUN mkdir -p /run/nginx && \
     mkdir -p /var/dokuwiki-storage/ && \
     cd /var/www
 
+ADD index.html /var/www/index.html
 ADD nginx.conf /etc/nginx/nginx.conf
 ADD supervisord.conf /etc/supervisord.conf
 ADD start.sh /start.sh
