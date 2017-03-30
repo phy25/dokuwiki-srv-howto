@@ -4,7 +4,7 @@ MAINTAINER Phy <dockerfile@phy25.com>
 
 RUN apk --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
         --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ add \
-        php7 php7-fpm php7-gd php7-session php7-xml nginx supervisor curl unzip
+        php7 php7-fpm php7-gd php7-session php7-xml php7-dom php7-curl php7-openssl php7-json php7-mbstring php7-iconv php7-phar nginx supervisor curl unzip
 
 RUN mkdir -p /run/nginx && \
     mkdir -p /var/dokuwiki-storage/ && \
