@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:edge
 MAINTAINER Phy <dockerfile@phy25.com>
 # Originally from Ilya Stepanov <dev@ilyastepanov.com>
 
