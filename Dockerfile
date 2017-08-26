@@ -7,6 +7,13 @@ ENV APACHE_ENVVARS $APACHE_CONFDIR/envvars
 RUN { \
         echo; \
         echo 'ServerName howto.info.bit.edu.cn'; \
+        echo '<IfModule mpm_prefork_module>'; \
+        echo 'StartServers                   5'; \
+        echo 'MinSpareServers                5'; \
+        echo 'MaxSpareServers               10'; \
+        echo 'MaxClients                   150'; \
+        echo 'MaxRequestsPerChild          100'; \
+        echo '</IfModule>'; \
     } | tee -a "$APACHE_CONFDIR/conf-available/docker-php.conf" \
     && ln -s $APACHE_CONFDIR/mods-available/rewrite.load $APACHE_CONFDIR/mods-enabled/rewrite.load
 

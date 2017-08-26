@@ -7,7 +7,7 @@ Based on `_/php:php-apache`. Thanks for the open source community!
 
 ### How to run
 
-> docker run -d -p 80:80 howto-docker
+> docker run -d -p 80:80 daocloud.io/phy25/dokuwiki-srv-howto
 
 ### How to build with fluency
 
